@@ -3,9 +3,16 @@ from dataclasses import dataclass
 import numpy as np
 
 
+@dataclass
+class CmdArgs:
+    cfg_file: str
+    dep_file: str
+    fl_file: str
+
+
 @dataclass(frozen=True)
 class InputData:
-    beta: np.ndarray
+    # beta: np.ndarray
     delta: np.ndarray
     gf: np.ndarray
 

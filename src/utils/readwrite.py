@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import numpy as np
 
 
-@dataclass(frozen=False)
+@dataclass(frozen=True)
 class Table:
     row_labels: list[str]
     col_labels: list[str]
