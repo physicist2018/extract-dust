@@ -1,6 +1,6 @@
 [project]
 name = "extract-dust"
-version = "0.1.2"
+version = "0.1.3"
 description = "Удаляет пыль из данных коэффициентов деполяризации и эффективности флуоресценции"
 readme = "README.md"
 requires-python = ">=3.14"

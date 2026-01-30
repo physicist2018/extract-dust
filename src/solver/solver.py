@@ -16,7 +16,7 @@ def findEtaD(input_data: InputData, config: Config) -> OutputData:
         OutputData: Выходные данные, содержащие коэффициент деполяризации
         для не пыли, ее долю eta_d.
     """
-    print(input_data.delta.data)
+
     eta_d = (
         (input_data.delta.data - config["delta_nd"])
         * (1.0 + config["delta_d"])
