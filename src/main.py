@@ -5,7 +5,7 @@ from config.readconfig import display_config, read_config
 from models.model import InputData
 from solver.solver import findEtaD, prepareData
 from utils.display import plot_table_heatmap
-from utils.readwrite import Table, read_matrix_file
+from utils.readwrite import read_matrix_file
 from utils.scale import scale_data
 
 
@@ -18,6 +18,7 @@ def main():
     fl = read_matrix_file(cmdArgs.fl_file)
 
     inputData = InputData(delta=dep, gf=fl)
+
     inpData = prepareData(inputData, config)
     etaData = findEtaD(inputData, config)
 
