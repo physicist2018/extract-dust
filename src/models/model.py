@@ -1,9 +1,13 @@
+"""
+Модели данных приложения. Нарочно сделаны неизменяемыми
+"""
+
 from dataclasses import dataclass
 
 import numpy as np
 
 
-@dataclass
+@dataclass(frozen=True)
 class CmdArgs:
     cfg_file: str
     dep_file: str
@@ -11,14 +15,21 @@ class CmdArgs:
 
 
 @dataclass(frozen=True)
+class Table:
+    row_labels: list[str]
+    col_labels: list[str]
+    data: np.ndarray
+
+
+@dataclass(frozen=True)
 class InputData:
     # beta: np.ndarray
-    delta: np.ndarray
-    gf: np.ndarray
+    delta: Table
+    gf: Table
 
 
 @dataclass(frozen=True)
 class OutputData:
-    eta_d: np.ndarray
-    delta_prime: np.ndarray
-    delta_nd: np.ndarray
+    eta_d: Table
+    delta_prime: Table
+    delta_nd: Table

@@ -1,13 +1,6 @@
-from dataclasses import dataclass
-
 import numpy as np
 
-
-@dataclass(frozen=True)
-class Table:
-    row_labels: list[str]
-    col_labels: list[str]
-    data: np.ndarray
+from models.model import Table
 
 
 def read_matrix_file(filename) -> Table:
